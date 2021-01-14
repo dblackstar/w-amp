@@ -1,0 +1,69 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet"> 
+    <title>W/AMP</title>
+</head>
+<body>
+    <div id="header">
+            <h1>W/AMP</h1>
+    </div>
+    <!--AMPLIFICADOR-->
+    <div id="amplificador">
+        <div id="cabecera">
+            <button id="encender" class="encenderSonido" onclick="connectDisconnect()"><b>⏻</b></button>
+            <button id="encenderAmp" class="encenderSonido" onclick="ampOnOff()"><b>AMP</b></button>
+            <h1>AMPLIFICADOR</h1>
+            <div id="setUno">
+                <p><b>MID</b></p>
+                <input type="range" id="mid" class="control-mid" min="-24" max="24" value="0" list="gain-vals" step="0.01" data-action="mid" /> 
+                <p><b>TREBLE</b></p>
+                <input type="range" id="treble" class="control-treble" min="-24" max="24" value="0" list="gain-vals" step="0.01" data-action="treble" />
+            </div>
+            <div id="setDos">
+                <p><b>GAIN</b></p>
+                <input input type="range" id="volume" class="control-volume" min="0" max="2" value="1" list="gain-vals" step="0.01" data-action="volume" />
+                <p><b>BASS</b></p>
+                <input type="range" id="bass" class="control-bass" min="-24" max="24" value="0" list="gain-vals" step="0.01" data-action="bass" />
+            </div>
+        </div>
+    </div>
+    <!--VISUALIZADOR-->
+    <div id="visualizadorDeAudio">
+        <input type="button" id="botonMP3" value="Escucha tu música" onclick="document.getElementById('mp3-input').click();" />
+        <input type="file" id="mp3-input" style="display:none;"/>
+        <canvas id="visualizador"></canvas>
+        <h3 id="songName"></h3>
+        <audio id="audio" controls></audio>
+        <div id="background"></div>
+    </div>
+    
+    <div id="efectos">
+        <div id="distortion">
+            <h3>Distortion</h3>
+            <button id="pedalDis" onclick="distorsionOnOff()">Activar</button>
+        </div>
+        <div id="delay">
+            <h3>Delay</h3>
+            <button id="pedalDel" onclick="delayOnOff()">Activar</button>
+        </div>
+        <div id="reverb">
+            <h3>Reverb</h3>
+            <button id="pedalRev" onclick="reverbOnOff()">Activar</button>
+        </div>
+        <div id="chorus">
+            <h3>Chorus</h3>
+            <button id="pedalCho" onclick="chorusOnOff()">Activar</button>
+        </div>
+        <div id="tremolo">
+            <h3>Tremolo</h3>
+            <button id="pedalTre" onclick="tremoloOnOff()">Activar</button>
+        </div>
+    </div>
+</body>
+    <script src="js/amp.js"></script>
+    <script src="js/visualizador.js"></script>
+    <script src="server.js"></script>
+</html>

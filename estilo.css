@@ -1,0 +1,326 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #b8b4b4;
+}
+
+/* VISUALIZADOR */
+
+#header {
+    position: relative;
+    height: 70px;
+    width: 100%;
+    background-color: #232323;
+    font-family: Lobster;
+    font-size: 20px;
+    color: white;
+    text-shadow: 1px 1px black;
+}
+    #header h1 {
+        position: absolute;
+        left: 50%;
+        margin-left: -80px;
+        top: 10px;
+    }
+
+#visualizadorDeAudio {
+    position: relative;
+    height: 300px;
+    width: 100%;
+    background-color: black;
+}
+
+    #botonMP3{
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        z-index: 3;
+        color: white;
+        background-color: #232323;
+        border-style: none;
+        height: 28px;
+        width: 150px;
+        border-radius: 5px;
+        font-family: monospace;
+    }
+
+    #mp3-input {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 3;
+    }
+
+    #vizualizador {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 300px;
+        width: 100%;
+    }
+
+    #audio {
+        position: absolute;
+        left: 10px;
+        bottom: 0;
+        width: calc(100% - 25px);
+        z-index: 3;
+        display: none
+    }
+        #visualizadorDeAudio:hover #audio {
+            display: block;
+        }
+        
+
+    #songName {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        z-index: 3;
+        color: #eeeeee;
+        font-family: monospace;
+    }
+
+/* FIN VISUALIZADOR */
+
+/* AMPLIFICADOR */
+
+#amplificador {
+    position: relative;
+    width: 100%;
+    border: 3px solid black;
+    box-sizing: border-box;
+}
+
+    #cabecera {
+        position: relative; 
+        width: 100%;
+        height: 80px;
+        background-color: #232323;
+        font-family: Lobster;
+        color: white;   
+    }
+        #cabecera h1 {
+            position: absolute;
+            left: 45%;
+            margin-left: -85px;
+            top: 25px;
+            text-shadow: 1px 1px black;
+        }
+
+        #encender{
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            border-radius: 360px;
+            background-color:#6B6C65;
+            border-style: none;
+            border: 1px solid black;
+            left: 80px;
+            top: 15px;
+            color: white;
+            text-align: center;
+            font-size: 28px;
+        }
+
+        #encenderAmp{
+            position: absolute;
+            height: 40px;
+            width: 70px;
+            background-color:rgb(126, 126, 126);
+            border-style: none;
+            border: 1px solid black;
+            left: 150px;
+            top: 20px;
+            color: white;
+            text-align: center;
+            font-size: 26px;
+        }
+        
+        #setUNo {
+            float: right;
+            font-family: monospace;
+            margin-top: 6px;
+            margin-left: 50px;
+            margin-right: 50px;
+            
+        }
+
+        #setDos {
+            float: right;
+            font-family: monospace;
+            margin-top: 6px;      
+        }
+
+/* FIN AMPLIFICADOR */
+
+/* PEDALES */
+
+#efectos {
+    
+    width: 100%;
+}
+    #distortion {
+        display: inline-block;
+        width: 200px;
+        height: 250px;
+        background-color: purple;
+        border-radius: 10px;
+        font-family: monospace;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px; 
+        margin-bottom: 40px;
+        margin-left: 120px;
+        border: 2px solid black;
+        padding: 10px;
+        box-shadow: 3px 3px black;
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+        #distortion button {
+            color:white;
+            font-family: monospace;
+            font-size: 20px;
+            position: absolute;
+            background-color: black;
+            border-style: none;
+            border-radius: 4px;
+            height: 35px;
+            width: 100px;
+            bottom: 20px;
+            margin: 0 auto;
+        }
+
+    #delay {
+        display: inline-block;
+        width: 200px;
+        height: 250px;
+        background-color: orangered;
+        border-radius: 10px;
+        font-family: monospace;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px; 
+        margin-bottom: 40px;
+        margin-left: 30px;
+        border: 2px solid black;
+        padding: 10px;
+        box-shadow: 3px 3px black;
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+        #delay button {
+            color:white;
+            font-family: monospace;
+            font-size: 20px;
+            position: absolute;
+            background-color: black;
+            border-style: none;
+            border-radius: 4px;
+            height: 35px;
+            width: 100px;
+            bottom: 20px;
+            margin: 0 auto;
+        }
+
+    #reverb {
+        display: inline-block;
+        width: 200px;
+        height: 250px;
+        background-color: #258a9c;
+        border-radius: 10px;
+        font-family: monospace;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px; 
+        margin-bottom: 40px;
+        margin-left: 30px;
+        border: 2px solid black;
+        padding: 10px;
+        box-shadow: 3px 3px black;
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+        #reverb button {
+            color:white;
+            font-family: monospace;
+            font-size: 20px;
+            position: absolute;
+            background-color: black;
+            border-style: none;
+            border-radius: 4px;
+            height: 35px;
+            width: 100px;
+            bottom: 20px;
+            margin: 0 auto;
+        }    
+
+    #chorus {
+        display: inline-block;
+        width: 200px;
+        height: 250px;
+        background-color: orange;
+        border-radius: 10px;
+        font-family: monospace;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px; 
+        margin-bottom: 40px;
+        margin-left: 30px;
+        border: 2px solid black;
+        padding: 10px;
+        box-shadow: 3px 3px black;
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+        #chorus button {
+            color:white;
+            font-family: monospace;
+            font-size: 20px;
+            position: absolute;
+            background-color: black;
+            border-style: none;
+            border-radius: 4px;
+            height: 35px;
+            width: 100px;
+            bottom: 20px;
+            margin: 0 auto;
+        } 
+
+    #tremolo {
+        display: inline-block;
+        width: 200px;
+        height: 250px;
+        background-color: #0a3829;
+        border-radius: 10px;
+        font-family: monospace;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 20px; 
+        margin-bottom: 40px;
+        margin-left: 30px;
+        border: 2px solid black;
+        padding: 10px;
+        box-shadow: 3px 3px black;
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+        #tremolo button {
+            color:white;
+            font-family: monospace;
+            font-size: 20px;
+            position: absolute;
+            background-color: black;
+            border-style: none;
+            border-radius: 4px;
+            height: 35px;
+            width: 100px;
+            bottom: 20px;
+            margin: 0 auto;
+        }  
+
+/* FIN PEDALES */
