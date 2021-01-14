@@ -8,4 +8,4 @@
 <li>4.- Connect your guitar into an audio port and you are ready to go (you can also use it from your mic)</li>
 </ul>
 
-<img src="imgs/demo.png">
+![](imgs/demo.png)
