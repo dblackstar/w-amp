@@ -7,5 +7,5 @@
     <li>3.- Go to localhost o your browser</li>
     <li>4.- Connect your guitar into an audio port and you are ready to go (you can also use it from your mic)</li>
 </ul>
-
+<br>
 ![](imgs/app.png)
